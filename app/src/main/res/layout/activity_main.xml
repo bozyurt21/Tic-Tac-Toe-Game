@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FED2E2"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/oScoreView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="40dp"
+        android:text="Score O"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Heading" />
+
+    <TextView
+        android:id="@+id/xScoreView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Score X"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Heading" />
+
+    <TextView
+        android:id="@+id/drawScoreView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Draw"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toStartOf="@+id/oScoreView"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toEndOf="@+id/xScoreView"
+        app:layout_constraintTop_toBottomOf="@+id/Heading"
+        app:layout_constraintVertical_bias="0.16" />
+
+    <TextView
+        android:id="@+id/Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Tic Tac Toe"
+        android:textColor="#000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/xScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:text="0"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/xScoreView"
+        app:layout_constraintTop_toBottomOf="@id/xScoreView" />
+
+    <TextView
+        android:id="@+id/oScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:text="0"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/oScoreView"
+        app:layout_constraintTop_toBottomOf="@id/oScoreView" />
+
+
+    <TextView
+        android:id="@+id/drawScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toStartOf="@+id/oScore"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toEndOf="@+id/xScore"
+        app:layout_constraintTop_toBottomOf="@+id/drawScoreView"
+        app:layout_constraintVertical_bias="0.083" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:useDefaultMargins="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xScore">
+
+        <TextView
+            android:id="@+id/cell1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="#C68EFD"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cell2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="#C68EFD"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cell3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="#C68EFD"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cell4"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="#C68EFD"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cell5"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="#C68EFD"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cell6"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="#C68EFD"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cell7"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="#C68EFD"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cell8"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="#C68EFD"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cell9"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="#C68EFD"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="#C68EFD"
+        android:text="Play Again"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gridLayout" />
+
+    <TextView
+        android:id="@+id/turns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X Player's turn"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/drawScore" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
